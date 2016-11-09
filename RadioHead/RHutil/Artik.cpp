@@ -27,11 +27,11 @@ void SPIClass::begin()
   uint16_t divider = SPI_SPEED;
   uint8_t bitorder = 0;
   uint8_t datamode = 0;
-  const char *device = SPI_DEVICE;
-  uint8_t mode = SPI_MODE; //default mode: CS active low, MSB first, Clock polarity is high, 
-  uint8_t bits = SPI_BITS;
-  uint32_t speed = SPI_SPEED;
-  uint16_t delay = SPI_DELAY;
+  device = SPI_DEVICE;
+  mode = SPI_MODE; //default mode: CS active low, MSB first, Clock polarity is high, 
+  bits = SPI_BITS;
+  speed = SPI_SPEED;
+  delay = SPI_DELAY;
 
   fd = open(device, O_RDWR);
   if (fd < 0)
